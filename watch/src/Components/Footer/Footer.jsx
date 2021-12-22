@@ -30,7 +30,7 @@ export const Footer = () => {
         <div className="footer-right">
           <Link to="/" className="footer-logo">
             <FaYoutube className="head-logo" />
-            Watch
+            Watchw
           </Link>
           <div className="connectMe">
             <div className="footer-name-padding">BY</div>
