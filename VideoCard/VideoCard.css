@@ -80,3 +80,88 @@
 	padding: 0.5rem;
 	border: 0.1rem solid var(--head-primary);
 }
+
+@media screen and (max-width: 1380px) {
+	.card-container {
+		min-height: 30vh;
+		max-height: 40vh;
+		width: 18vw;
+	}
+	.card-thumbnail {
+		display: block;
+		width: 18vw;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 1240px) {
+	.card-container {
+		min-height: 30vh;
+		max-height: 40vh;
+		width: 23.25vw;
+	}
+	.card-thumbnail {
+		display: block;
+		width: 23.25vw;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.card-container {
+		min-height: 30vh;
+		max-height: 40vh;
+		width: 33.25vw;
+	}
+	.card-thumbnail {
+		display: block;
+		width: 33.25vw;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.card-container {
+		min-height: 30vh;
+		max-height: 40vh;
+		width: 41.25vw;
+	}
+	.card-thumbnail {
+		display: block;
+		width: 41.25vw;
+		height: auto;
+	}
+	.card-avatar {
+		top: 42.5%;
+	}
+}
+
+@media screen and (max-height: 640px) {
+	.card-container {
+		min-height: 30vh;
+		max-height: 55vh;
+		width: 41.25vw;
+	}
+	.card-thumbnail {
+		display: block;
+		width: 41.25vw;
+		height: auto;
+	}
+	.card-avatar {
+		top: 42.5%;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.card-container {
+		width: 80vw;
+		max-height: 57.5vh;
+	}
+	.card-thumbnail {
+		width: 80vw;
+		height: auto;
+	}
+	.card-avatar {
+		top: 55%;
+	}
+}
