@@ -149,3 +149,43 @@
 	letter-spacing: 0.1rem;
 	text-align: center;
 }
+
+/* media queries  */
+@media screen and (max-width: 880px) {
+	.flat-card-img {
+		width: 30vw;
+		height: auto;
+	}
+}
+@media screen and (max-width: 740px) {
+	.flat-card-img {
+		width: 32.5vw;
+		height: auto;
+	}
+}
+@media screen and (max-width: 540px) {
+	.video-flat-card {
+		padding: 1.75rem;
+		display: flex;
+		flex-direction: column;
+	}
+	.history-main {
+		width: 100%;
+	}
+	.flat-card-video-info {
+		margin-top: 1.5rem;
+		display: grid;
+		grid-template-columns: 7fr 2fr;
+	}
+	.flat-card-text {
+		margin: 0;
+	}
+	.flat-card-img {
+		width: 100%;
+		height: auto;
+		border-radius: 1rem;
+	}
+	.video-remove-cta {
+		justify-self: flex-end;
+	}
+}
