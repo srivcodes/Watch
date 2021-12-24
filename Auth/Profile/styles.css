@@ -44,3 +44,19 @@
 .primary-color {
 	color: var(--head-primary);
 }
+
+@media screen and (max-width: 880px) {
+	.profile-main {
+		width: 95%;
+	}
+	.profile-card {
+		min-width: 80vw;
+		padding: 2rem;
+	}
+}
+@media screen and (max-width: 540px) {
+	.profile-text {
+		display: grid;
+		grid-template-columns: auto;
+	}
+}
