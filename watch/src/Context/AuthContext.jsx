@@ -2,7 +2,7 @@ import { createContext, useContext, useReducer } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthReducer } from '../Reducer';
-import { VIZZ_API } from '../utils';
+import { WATCH_API } from '../utils';
 
 const AuthContext = createContext();
 
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
       const {
         data: { message },
         status
-      } = await axios.post(`${VIZZ_API}/users`, {
+      } = await axios.post(`${WATCH_API}/users`, {
         firstname,
         lastname,
         email,
@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
         status
       } = await axios({
         method: 'POST',
-        url: `${VIZZ_API}/users/login`,
+        url: `${WATCH_API}/users/login`,
         headers: { email, password }
       });
 
@@ -83,7 +83,7 @@ export const AuthProvider = ({ children }) => {
       const {
         data: { message },
         status
-      } = await axios.post(`${VIZZ_API}/users/password-reset`, {
+      } = await axios.post(`${WATCH_API}/users/password-reset`, {
         email,
         password
       });

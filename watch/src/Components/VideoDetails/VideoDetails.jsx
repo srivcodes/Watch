@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { FaPlusCircle, FaCheckCircle } from 'react-icons/fa';
 import {
   addOrRemoveVideoInPlaylist,
-  VIZZ_API,
+  WATCH_API,
   addVideosInPlaylist,
   createPlaylist
 } from '../../utils';
@@ -48,7 +48,7 @@ export const VideoDetails = () => {
       try {
         const {
           data: { response }
-        } = await axios.get(`${VIZZ_API}/videos/${vidId}`);
+        } = await axios.get(`${WATCH_API}/videos/${vidId}`);
         setVideo(response);
       } catch (error) {
         console.log(error);

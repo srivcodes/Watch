@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useAuth } from '../../../Context';
-import { VIZZ_API } from '../../../utils';
+import { WATCH_API } from '../../../utils';
 import { FaUserCircle } from 'react-icons/fa';
 import './styles.css';
 
