@@ -199,3 +199,17 @@
 	letter-spacing: 0.05rem;
 	color: var(--primary);
 }
+
+@media screen and (max-width: 1024px) {
+	.form-main {
+		width: 90%;
+		margin: 2.5rem 0;
+	}
+	.form-card {
+		box-shadow: none;
+	}
+	.form-field-container {
+		width: auto;
+		padding: 0 1rem 1rem 1rem;
+	}
+}
