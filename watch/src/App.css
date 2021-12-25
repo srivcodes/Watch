@@ -57,4 +57,23 @@ html {
 	background: var(--head-secondary);
 }
 
+@media screen and (max-width: 1380px) {
+	.app-main {
+		grid-template-columns: 1fr 6fr;
+	}
+}
+@media screen and (max-width: 1240px) {
+	.app-main {
+		grid-template-columns: 1fr 5fr;
+	}
+}
 
+@media screen and (max-width: 880px) {
+	.app-main {
+		grid-template-areas:
+			" header-area header-area"
+			"main-app-area main-app-area"
+			"footer-area footer-area";
+		width: 100%;
+	}
+}
