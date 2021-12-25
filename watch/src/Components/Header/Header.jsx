@@ -1,4 +1,10 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaUserCircle, FaYoutube } from "react-icons/fa";
+import { BiSearch } from "react-icons/bi";
 import "./styles.css";
+// import { useAuth } from "../../Context";
 
 export const Header = () => {
   
