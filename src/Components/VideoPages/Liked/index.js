@@ -1,3 +1,0 @@
-
-   
-export { Liked } from "./Liked";
