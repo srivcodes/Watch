@@ -1,19 +1,19 @@
-import React, { StrictMode } from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React, { StrictMode } from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-import { AppDataProvider, AuthProvider } from "./Context";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AuthProvider, AppDataProvider } from './Context';
 
 ReactDOM.render(
-	<StrictMode>
-		<Router>
-			<AuthProvider>
-				<AppDataProvider>
-					<App />
-				</AppDataProvider>
-			</AuthProvider>
-		</Router>
-	</StrictMode>,
-	document.getElementById("root")
+  <StrictMode>
+    <Router>
+      <AuthProvider>
+        <AppDataProvider>
+          <App />
+        </AppDataProvider>
+      </AuthProvider>
+    </Router>
+  </StrictMode>,
+  document.getElementById('root')
 );

@@ -1,13 +1,15 @@
-import "./styles.css";
-import { Link } from "react-router-dom";
-import { FaYoutube } from "react-icons/fa";
+import './styles.css';
+import { Link } from 'react-router-dom';
+import { FaYoutube } from 'react-icons/fa';
 
 export const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-main">
         <div className="footer-left ">
-          <div className="footer-padding footer-para">Reach out to me here:</div>
+          <div className="footer-padding footer-para">
+            Reach out to me here:
+          </div>
           <div className="socialNav">
             <a
               href="https://www.linkedin.com/in/srividyamv/"

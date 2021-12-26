@@ -9,4 +9,4 @@ export const categories = [
   'Popular'
 ];
 
-export const WATCH_API = 'https://vizztube-apis.herokuapp.com';
+export const WATCH_API = '#';

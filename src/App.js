@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useAppDataContext, useAuth } from './Context';
+// import { useAppDataContext, useAuth } from './Context';
 import { WATCH_API } from './utils';
 import { setupAuthExceptionHandler } from './utils';
 import './App.css';
@@ -26,6 +26,7 @@ import {
   SearchedVideos,
   PlaylistVideos
 } from './Components';
+import { useAppDataContext, useAuth } from './Context';
 
 function App() {
   const navigate = useNavigate();
