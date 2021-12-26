@@ -1,4 +1,5 @@
 import "./styles.css";
+import React from 'react';
 import { useAppDataContext } from "../../../Context";
 import { useLocation } from "react-router-dom";
 import { VideoCard } from "../../VideoCard";
