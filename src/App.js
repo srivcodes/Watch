@@ -1,32 +1,32 @@
-import axios from 'axios';
-import { useEffect } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-// import { useAppDataContext, useAuth } from './Context';
-import { WATCH_API } from './utils';
-import { setupAuthExceptionHandler } from './utils';
-import './App.css';
+import axios from "axios";
+import { useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import { useAppDataContext, useAuth } from "./Context";
+import { WATCH_API } from "./utils";
+import { setupAuthExceptionHandler } from "./utils";
+import "./App.css";
 
 import {
-  Header,
-  Footer,
-  Home,
-  PrivateRoute,
-  Liked,
-  Playlists,
-  History,
-  Explore,
-  Login,
-  Signup,
-  ForgotPassword,
-  Nav,
-  PhoneNav,
-  VideoDetails,
-  ErrorPage,
-  Profile,
-  SearchedVideos,
-  PlaylistVideos
-} from './Components';
-import { useAppDataContext, useAuth } from './Context';
+	Header,
+	Footer,
+	Home,
+	PrivateRoute,
+	Liked,
+	Playlists,
+	History,
+	Explore,
+	Login,
+	Signup,
+	ForgotPassword,
+	Nav,
+	PhoneNav,
+	VideoDetails,
+	ErrorPage,
+	Profile,
+	SearchedVideos,
+	PlaylistVideos,
+} from "./Components";
+
 
 function App() {
   const navigate = useNavigate();
