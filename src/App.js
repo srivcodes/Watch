@@ -1,39 +1,38 @@
-import axios from "axios";
-import { useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { useAppDataContext, useAuth } from "./Context";
-import { WATCH_API } from "./utils";
-import { setupAuthExceptionHandler } from "./utils";
-import "./App.css";
+import axios from 'axios';
+import React, { useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useAppDataContext, useAuth } from './Context';
+import { WATCH_API } from './utils';
+import { setupAuthExceptionHandler } from './utils';
+import './App.css';
 
 import {
-	Header,
-	Footer,
-	Home,
-	PrivateRoute,
-	Liked,
-	Playlists,
-	History,
-	Explore,
-	Login,
-	Signup,
-	ForgotPassword,
-	Nav,
-	PhoneNav,
-	VideoDetails,
-	ErrorPage,
-	Profile,
-	SearchedVideos,
-	PlaylistVideos,
-} from "./Components";
-
+  Header,
+  Footer,
+  Home,
+  PrivateRoute,
+  Liked,
+  Playlists,
+  History,
+  Explore,
+  Login,
+  Signup,
+  ForgotPassword,
+  Nav,
+  PhoneNav,
+  VideoDetails,
+  ErrorPage,
+  Profile,
+  SearchedVideos,
+  PlaylistVideos,
+} from './Components';
 
 function App() {
   const navigate = useNavigate();
   const { state, dispatch } = useAppDataContext();
   const {
     state: { token },
-    logout
+    logout,
   } = useAuth();
 
   useEffect(() => {
@@ -44,7 +43,7 @@ function App() {
     (async () => {
       try {
         const {
-          data: { response }
+          data: { response },
         } = await axios.get(`${WATCH_API}/videos`);
 
         dispatch({ type: 'SET_VIDEOS', payload: response });
@@ -60,14 +59,14 @@ function App() {
         try {
           const {
             data: {
-              response: { customPlaylists, historyPlaylist, likedPlaylist }
-            }
+              response: { customPlaylists, historyPlaylist, likedPlaylist },
+            },
           } = await axios({
             url: `${WATCH_API}/playlists`,
             method: 'GET',
             headers: {
-              Authorization: `Bearer ${token}`
-            }
+              Authorization: `Bearer ${token}`,
+            },
           });
 
           dispatch({ type: 'SET_PLAYLISTS', payload: customPlaylists });

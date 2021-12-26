@@ -1,4 +1,5 @@
 import "./phoneNav.css";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaCompass, FaHeart } from "react-icons/fa";
 import { BsFillCollectionPlayFill } from "react-icons/bs";

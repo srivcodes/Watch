@@ -1,4 +1,5 @@
 import './explore.css';
+import React from "react";
 import { VideoCard } from '../../VideoCard/VideoCard';
 import { useLocation, NavLink } from 'react-router-dom';
 import { categories } from '../../../utils/data';

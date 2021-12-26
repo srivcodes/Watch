@@ -1,6 +1,6 @@
 import './styles.css';
 import ReactPlayer from 'react-player/youtube';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, Navigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';

@@ -1,4 +1,5 @@
 import './nav.css';
+import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { FaCompass, FaHeart, FaTshirt } from 'react-icons/fa';
 import { BsFillCollectionPlayFill } from 'react-icons/bs';
