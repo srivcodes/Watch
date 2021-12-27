@@ -34,7 +34,7 @@ export const Home = () => {
                 <br />
                 do your planet a favour
               </p>
-              <Link to="/explore?cat=Video%20Editing">
+              <Link to="/explore?cat=Indian%20Textile">
                 <button className="discover-button">Know More</button>
               </Link>
             </div>
