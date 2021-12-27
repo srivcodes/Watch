@@ -44,13 +44,13 @@ export const Home = () => {
           <div className="popular-head">Popular</div>
           <div
             className={`${
-              state.videos.length !== 0 ? 'popular-main' : 'loader-container'
+              state?.videos?.length !== 0 ? 'popular-main' : 'loader-container'
             }`}
           >
-            {state.videos.length !== 0 ? (
-              state.videos
-                .filter((video) => video.category === 'Popular')
-                .map((video) => {
+            {state?.videos?.length !== 0 ? (
+              state?.videos
+                ?.filter((video) => video?.category === 'Popular')
+                ?.map((video) => {
                   return <VideoCard video={video} key={video._id} />;
                 })
             ) : (
