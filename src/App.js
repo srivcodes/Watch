@@ -24,7 +24,7 @@ import {
   ErrorPage,
   Profile,
   SearchedVideos,
-  PlaylistVideos,
+  PlaylistVideos
 } from './Components';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
   const { state, dispatch } = useAppDataContext();
   const {
     state: { token },
-    logout,
+    logout
   } = useAuth();
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function App() {
     (async () => {
       try {
         const {
-          data: { response },
+          data: { response }
         } = await axios.get(`${WATCH_API}/videos`);
 
         dispatch({ type: 'SET_VIDEOS', payload: response });
@@ -59,14 +59,14 @@ function App() {
         try {
           const {
             data: {
-              response: { customPlaylists, historyPlaylist, likedPlaylist },
-            },
+              response: { customPlaylists, historyPlaylist, likedPlaylist }
+            }
           } = await axios({
             url: `${WATCH_API}/playlists`,
             method: 'GET',
             headers: {
-              Authorization: `Bearer ${token}`,
-            },
+              Authorization: `Bearer ${token}`
+            }
           });
 
           dispatch({ type: 'SET_PLAYLISTS', payload: customPlaylists });
@@ -94,15 +94,47 @@ function App() {
               <Route path="/explore" element={<Explore />} />
               <Route path="/explore/:vidId" element={<VideoDetails />} />
 
-              <PrivateRoute path="/liked" element={<Liked />} />
-              <PrivateRoute path="/playlists" element={<Playlists />} />
-              <PrivateRoute
-                path="/playlists/:playlistId"
-                element={<PlaylistVideos />}
+              <Route
+                path="/liked"
+                element={
+                  <PrivateRoute>
+                    <Liked />
+                  </PrivateRoute>
+                }
               />
-              <PrivateRoute path="/history" element={<History />} />
+              <Route
+                path="/playlists"
+                element={
+                  <PrivateRoute>
+                    <Playlists />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/playlists/:playlistId"
+                element={
+                  <PrivateRoute>
+                    <PlaylistVideos />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/history"
+                element={
+                  <PrivateRoute>
+                    <History />
+                  </PrivateRoute>
+                }
+              />
 
-              <PrivateRoute path="/profile" element={<Profile />} />
+              <Route
+                path="/profile"
+                element={
+                  <PrivateRoute>
+                    <Profile />
+                  </PrivateRoute>
+                }
+              />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgot-pass" element={<ForgotPassword />} />
