@@ -7,8 +7,10 @@ export const PrivateRoute = ({ path, ...props }) => {
     state: { token }
   } = useAuth();
 
+  console.log(props.children);
+
   return token ? (
-    <Route {...props} path={path} />
+    props.children
   ) : (
     <Navigate to="/login" state={{ from: path }} replace />
   );
