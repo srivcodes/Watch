@@ -9,7 +9,7 @@ import "./styles.css";
 export const Header = () => {
   
   const [searchTerm, setSearchTerm] = useState('');
-
+  // const { userName } = useAuth();
   return (
     <div className="header-container">
       <nav className="header-main">
