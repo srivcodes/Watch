@@ -10,7 +10,7 @@ export const SearchedVideos = () => {
 
 	const searchTerm = search.get("searchTerm");
 
-	const filteredVideo = state.videos?.filter(
+	const filteredVideo = state?.videos?.filter(
 		(video) =>
 			video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			video.category.toLowerCase().includes(searchTerm.toLowerCase()) ||

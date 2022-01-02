@@ -1,5 +1,5 @@
 import './explore.css';
-import React from "react";
+import React from 'react';
 import { VideoCard } from '../../VideoCard/VideoCard';
 import { useLocation, NavLink } from 'react-router-dom';
 import { categories } from '../../../utils/data';
@@ -31,15 +31,15 @@ export const Explore = () => {
               );
             })}
         </nav>
-        {state.videos.length !== 0 ? (
+        {state.videos && state?.videos?.length !== 0 ? (
           <section className="video-card-container">
-            {searchedCategory === 'All Videos'
-              ? state.videos.map((video) => {
+            {searchedCategory === 'All Videos' && state.videos
+              ? state.videos?.map((video) => {
                   return <VideoCard video={video} key={video._id} />;
                 })
               : state.videos
-                  .filter((video) => video.category === searchedCategory)
-                  .map((video) => {
+                  ?.filter((video) => video?.category === searchedCategory)
+                  ?.map((video) => {
                     return <VideoCard video={video} key={video._id} />;
                   })}
           </section>

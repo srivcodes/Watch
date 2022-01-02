@@ -42,11 +42,9 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const {
-          data: { response }
-        } = await axios.get(`${WATCH_API}/videos`);
-
-        dispatch({ type: 'SET_VIDEOS', payload: response });
+        const { data } = await axios.get(`${WATCH_API}/videos`);
+        console.log(data);
+        dispatch({ type: 'SET_VIDEOS', payload: data.data });
       } catch (error) {
         console.log(error);
       }

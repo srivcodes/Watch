@@ -9,4 +9,4 @@ export const categories = [
   'Popular'
 ];
 
-export const WATCH_API = 'https://backend-watch.herokuapp.com/';
+export const WATCH_API = 'https://backend-watch.herokuapp.com';

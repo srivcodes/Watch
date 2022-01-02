@@ -26,9 +26,8 @@ export const AppDataReducer = (state, { type, payload }) => {
     case 'DELETE_PLAYLIST':
       return {
         ...state,
-        playlists: state.playlists.filter(
-          (playlist) => playlist._id !== payload
-        )
+        playlists:
+          state.playlists.filter((playlist) => playlist._id !== payload) || []
       };
     case 'RESET_STATE': {
       return {
