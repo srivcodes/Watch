@@ -10,7 +10,7 @@ import { GiLipstick, GiWool } from 'react-icons/gi';
 
 export const Nav = () => {
   const search = new URLSearchParams(useLocation().search);
-  const searchedCategory = search.get('cat') ? search.get('cat') : 'All Videos';
+  const searchedCategory = search.get('category') ? search.get('category') : 'All Videos';
   return (
     <div className="nav-container">
       <div className="nav-main">
@@ -64,9 +64,9 @@ export const Nav = () => {
         <nav className="nav-category">
           <div className="nav-head">CATEGORY</div>
           <NavLink
-            to="/explore?cat=Basics"
+            to="/explore?cat=basics"
             className={`cat-main ${
-              searchedCategory === 'Basics' ? 'nav-active' : ''
+              searchedCategory === 'basics' ? 'nav-active' : ''
             }`}
           >
             <div className="nav-icons-container">
@@ -76,21 +76,21 @@ export const Nav = () => {
             <span className="cat-head">Basics</span>
           </NavLink>
           <NavLink
-            to="/explore?cat=Indian%20Textile"
+            to="/explore?category=indian_textile"
             className={`cat-main ${
-              searchedCategory === 'Indian Textile' ? 'nav-active' : ''
+              searchedCategory === 'indian_textiles' ? 'nav-active' : ''
             }`}
           >
             <div className="nav-icons-container">
               <FaTshirt className="nav-icons" />
             </div>
 
-            <span className="cat-head">Indian Textile</span>
+            <span className="cat-head">Indian Textiles</span>
           </NavLink>
           <NavLink
-            to="/explore?cat=Styling"
+            to="/explore?category=styling"
             className={`cat-main ${
-              searchedCategory === 'Styling' ? 'nav-active' : ''
+              searchedCategory === 'styling' ? 'nav-active' : ''
             }`}
           >
             <div className="nav-icons-container">
@@ -100,9 +100,9 @@ export const Nav = () => {
             <span className="cat-head">Styling</span>
           </NavLink>
           <NavLink
-            to="/explore?cat=Handloom"
+            to="/explore?category=handloom"
             className={`cat-main ${
-              searchedCategory === 'Handloom' ? 'nav-active' : ''
+              searchedCategory === 'handloom' ? 'nav-active' : ''
             }`}
           >
             <div className="nav-icons-container">
@@ -112,9 +112,9 @@ export const Nav = () => {
             <span className="cat-head">Handloom</span>
           </NavLink>
           <NavLink
-            to="/explore?cat=Brands"
+            to="/explore?category=brands"
             className={`cat-main ${
-              searchedCategory === 'Brands' ? 'nav-active' : ''
+              searchedCategory === 'brands' ? 'nav-active' : ''
             }`}
           >
             <div className="nav-icons-container">
@@ -124,9 +124,9 @@ export const Nav = () => {
             <span className="cat-head">Brands</span>
           </NavLink>
           <NavLink
-            to="/explore?cat=Others"
+            to="/explore?category=others"
             className={`cat-main ${
-              searchedCategory === 'Others' ? 'nav-active' : ''
+              searchedCategory === 'others' ? 'nav-active' : ''
             }`}
           >
             <div className="nav-icons-container">

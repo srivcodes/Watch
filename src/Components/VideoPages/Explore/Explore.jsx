@@ -10,23 +10,25 @@ import PulseLoader from 'react-spinners/PulseLoader';
 export const Explore = () => {
   const { state } = useAppDataContext();
   const search = new URLSearchParams(useLocation().search);
-  const searchedCategory = search.get('cat') ? search.get('cat') : 'All Videos';
+  const searchedCategory = search.get('category')
+    ? search.get('category')
+    : 'All Videos';
   return (
     <div className="explore-container">
       <div className="explore-main">
         <nav className="category-toggle">
           {categories
-            .filter((cat) => cat !== 'Popular')
-            .map((category) => {
+            .filter(({ id }) => id !== 'popular')
+            .map(({ id, label }) => {
               return (
                 <NavLink
-                  to={`?cat=${category}`}
-                  key={category}
+                  to={`?category=${id}`}
+                  key={id}
                   className={`category-cta ${
-                    searchedCategory === category ? 'category-cta-active' : ''
+                    searchedCategory === id ? 'category-cta-active' : ''
                   }`}
                 >
-                  {category}
+                  {label}
                 </NavLink>
               );
             })}
@@ -38,7 +40,7 @@ export const Explore = () => {
                   return <VideoCard video={video} key={video._id} />;
                 })
               : state.videos
-                  ?.filter((video) => video?.category === searchedCategory)
+                  ?.filter((video) => video?.id === searchedCategory)
                   ?.map((video) => {
                     return <VideoCard video={video} key={video._id} />;
                   })}
