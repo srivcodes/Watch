@@ -33,5 +33,5 @@ export const categories = [
   }
 ];
 
-// export const WATCH_API = 'https://backend-watch.herokuapp.com';
-export const WATCH_API = 'http://localhost:8000';
+export const WATCH_API = 'https://backend-watch.herokuapp.com';
+// export const WATCH_API = 'http://localhost:8000';

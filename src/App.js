@@ -8,7 +8,6 @@ import './App.css';
 
 import {
   Header,
-  Footer,
   Home,
   PrivateRoute,
   Liked,
@@ -144,7 +143,6 @@ function App() {
             </Routes>
           </div>
 
-          <Footer />
         </div>
         <PhoneNav />
       </div>
