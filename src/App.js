@@ -78,7 +78,7 @@ function App() {
     }
   }, [token]);
 
-  console.log({ state });
+  // console.log({ state });
   return (
     <div className="App">
       <div className="app-container">
