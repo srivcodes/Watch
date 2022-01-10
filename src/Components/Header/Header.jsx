@@ -17,7 +17,7 @@ export const Header = () => {
       <nav className="header-main">
         <div className="head-left">
           <Link to="/" className="head-main-logo">
-            <FaYoutube className="head-logo" />
+            {/* <FaYoutube className="head-logo" /> */}
             <span className="head-watch">Watch</span>
           </Link>
         </div>

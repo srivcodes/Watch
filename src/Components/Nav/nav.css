@@ -8,6 +8,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	font-family: "Poppins", sans-serif;
+	width: 25em;
 }
 
 .nav-main {

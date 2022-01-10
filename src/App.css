@@ -3,9 +3,10 @@
   --back-secondary: #353340;
   --back-card: #262837;
   --head-primary: #ffffff;
-  --head-secondary: #808191;
-  --primary: #6c5ecf;
+  --head-secondary: #EEEEEE;
+  --primary: rgb(78, 33, 150, 0.9);
   --secondary: #ea5f5f;
+  --header: #795274;
 }
 
 * {
