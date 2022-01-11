@@ -7,7 +7,8 @@ module.exports = {
     filename: 'index.bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    mainFiles: ['index']
   },
   devServer: {
     port: 3000,
