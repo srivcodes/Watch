@@ -8,7 +8,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    mainFiles: ['index']
+    mainFiles: ['index'],
+    symlinks: true
   },
   devServer: {
     port: 3000,
