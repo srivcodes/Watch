@@ -11,7 +11,8 @@ export const Profile = () => {
     dispatch,
     logout
   } = useAuth();
-
+ const sampleData = useAuth();
+ console.log(sampleData , "this is from profile");
   useEffect(() => {
     if (!userDetails) {
       (async () => {

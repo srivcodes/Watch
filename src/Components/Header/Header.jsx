@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 // import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { FaUserCircle, FaYoutube } from "react-icons/fa";
-import { BiSearch } from "react-icons/bi";
-import "./styles.css";
-import { useAuth } from "../../Context";
+import { Link } from 'react-router-dom';
+import { FaUserCircle, FaYoutube } from 'react-icons/fa';
+import { BiSearch } from 'react-icons/bi';
+import './styles.css';
+import { useAuth } from '../../Context';
 // import { useAuth } from "../../Context";
 
 export const Header = () => {
-  
   const [searchTerm, setSearchTerm] = useState('');
-  
-  const { userName } = useAuth();
+
+  const {
+    state: { userName }
+  } = useAuth();
+  // const data = useAuth();
+  // console.log(data, 'data from useAuth');
   return (
     <div className="header-container">
       <nav className="header-main">

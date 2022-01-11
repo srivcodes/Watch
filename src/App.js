@@ -43,7 +43,7 @@ function App() {
       try {
         const { data } = await axios.get(`${WATCH_API}/videos`);
         console.log(data);
-        dispatch({ type: 'SET_VIDEOS', payload: data.data });
+        dispatch({ type: 'SET_VIDEOS', payload: data.response });
       } catch (error) {
         console.log(error);
       }

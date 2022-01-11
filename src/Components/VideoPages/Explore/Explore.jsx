@@ -33,15 +33,15 @@ export const Explore = () => {
               );
             })}
         </nav>
-        {state.videos && state?.videos?.length !== 0 ? (
+        {state.videos && state.videos.length ? (
           <section className="video-card-container">
-            {searchedCategory === 'All Videos' && state.videos
-              ? state.videos?.map((video) => {
+            {searchedCategory === 'all_videos' && state.videos
+              ? state.videos.map((video) => {
                   return <VideoCard video={video} key={video._id} />;
                 })
               : state.videos
-                  ?.filter((video) => video?.id === searchedCategory)
-                  ?.map((video) => {
+                  .filter((video) => video.id === searchedCategory)
+                  .map((video) => {
                     return <VideoCard video={video} key={video._id} />;
                   })}
           </section>
