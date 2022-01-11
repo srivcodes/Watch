@@ -5,25 +5,24 @@ import { useAppDataContext, useAuth } from './Context';
 import { WATCH_API, setupAuthExceptionHandler } from './utils';
 import './App.css';
 
-import {
-  Header,
-  Home,
-  PrivateRoute,
-  Liked,
-  Playlists,
-  History,
-  Explore,
-  Login,
-  Signup,
-  ForgotPassword,
-  Nav,
-  PhoneNav,
-  VideoDetails,
-  ErrorPage,
-  Profile,
-  SearchedVideos,
-  PlaylistVideos
-} from './Components';
+import { Header } from './Components/Header/index';
+import { Home } from './Components/Home/index';
+import { PrivateRoute } from './Components/Auth/index';
+import {  Liked } from './Components/VideoPages/index';
+import { Playlists } from './Components/VideoPages/index';
+import {  History } from './Components/VideoPages/index';
+import { Explore } from './Components/VideoPages/index';
+import { Login } from './Components/Auth/index';
+import { Signup } from './Components/Auth/index';
+import { ForgotPassword } from './Components/Auth/index';
+import { Nav } from './Components/Nav/index';
+import { PhoneNav } from './Components/Nav/index';
+import { VideoDetails } from './Components/VideoDetails/index';
+import { ErrorPage } from './Components/ErrorPage/index';
+import { Profile } from './Components/Auth/Profile/index';
+import { SearchedVideos } from './Components/VideoPages/index';
+import { PlaylistVideos } from './Components/VideoPages/index';
+
 
 function App() {
   const navigate = useNavigate();
