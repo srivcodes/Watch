@@ -49,15 +49,15 @@ export const Profile = () => {
           <div>
             <p className="profile-text">
               {' '} {' '}
-              <span className="primary-color">{userDetails?.firstname}</span>
-              <span className="primary-color">{userDetails?.lastname}</span>
+              <span className="primary-color">{userDetails?.firstname.toUpperCase()}</span>
+              <span className="primary-color">{userDetails?.lastname.toUpperCase()}</span>
             </p>
             {/* <p className="profile-text">
               Lastname:{' '}
               <span className="primary-color">{userDetails?.lastname}</span>
             </p> */}
             <p className="profile-text">
-              Email: <span className="primary-color">{userDetails?.email}</span>
+              <span className="primary-color">{userDetails?.email}</span>
             </p>
           </div>
 

@@ -44,6 +44,7 @@
 }
 .primary-color {
 	color: var(--head-primary);
+	padding: 3px;
 }
 
 @media screen and (max-width: 880px) {
