@@ -1,7 +1,7 @@
-import axios from 'axios/index';
+import axios from 'axios';
 import React, { useEffect } from 'react';
-import { useAuth } from '../../../Context/AuthContext';
-import { WATCH_API } from '../../../utils/data';
+import { useAuth } from 'Context/AuthContext';
+import { WATCH_API } from 'Utils/data';
 import { FaUserCircle } from 'react-icons/fa';
 import './styles.css';
 

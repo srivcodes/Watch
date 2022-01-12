@@ -13,6 +13,7 @@ module.exports = {
       Utils: path.resolve(__dirname, 'src/Utils/'),
       Context: path.resolve(__dirname, 'src/Context/'),
       Components: path.resolve(__dirname, 'src/Components/'),
+      Reducer: path.resolve(__dirname, 'src/Reducer/'),
     },
   },
   devServer: {
