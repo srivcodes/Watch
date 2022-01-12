@@ -9,6 +9,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    alias: {
+      Utils: path.resolve(__dirname, 'src/Utils/'),
+      Context: path.resolve(__dirname, 'src/Context/'),
+      Components: path.resolve(__dirname, 'src/Components/'),
+    },
   },
   devServer: {
     port: 3000,

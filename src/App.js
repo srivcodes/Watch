@@ -1,30 +1,29 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useAppDataContext} from './Context/AppDataContext';
-import { useAuth } from './Context/AuthContext'
-import { WATCH_API } from './utils/data';
-import { setupAuthExceptionHandler } from './utils/AuthExceptionHandler'
+import { useAppDataContext } from 'Context/AppDataContext';
+import { useAuth } from 'Context/AuthContext';
+import { WATCH_API } from 'Utils/data';
+import { setupAuthExceptionHandler } from 'Utils/AuthExceptionHandler';
 import './App.css';
 
-import { Header } from './Components/Header/Header';
-import { Home } from './Components/Home/Home';
-import { PrivateRoute } from './Components/Auth/PrivateRoute';
-import {  Liked } from './Components/VideoPages/Liked/Liked';
-import { Playlists } from './Components/VideoPages/Playlists/Playlists';
-import {  History } from './Components/VideoPages/History/History';
-import { Explore } from './Components/VideoPages/Explore/Explore';
-import { Login } from './Components/Auth/Login';
-import { Signup } from './Components/Auth/Signup';
-import { ForgotPassword } from './Components/Auth/ForgotPassword';
-import { Nav } from './Components/Nav/Nav';
-import { PhoneNav } from './Components/Nav/PhoneNav';
-import { VideoDetails } from './Components/VideoDetails/VideoDetails';
-import { ErrorPage } from './Components/ErrorPage/ErrorPage';
-import { Profile } from './Components/Auth/Profile/Profile';
-import { SearchedVideos } from './Components/VideoPages/SearchedVideos/SearchedVideos';
-import { PlaylistVideos } from './Components/VideoPages/Playlists/PlaylistVideos';
-
+import { Header } from 'Components/Header/Header';
+import { Home } from 'Components/Home/Home';
+import { PrivateRoute } from 'Components/Auth/PrivateRoute';
+import { Liked } from 'Components/VideoPages/Liked/Liked';
+import { Playlists } from 'Components/VideoPages/Playlists/Playlists';
+import { History } from 'Components/VideoPages/History/History';
+import { Explore } from 'Components/VideoPages/Explore/Explore';
+import { Login } from 'Components/Auth/Login';
+import { Signup } from 'Components/Auth/Signup';
+import { ForgotPassword } from 'Components/Auth/ForgotPassword';
+import { Nav } from 'Components/Nav/Nav';
+import { PhoneNav } from 'Components/Nav/PhoneNav';
+import { VideoDetails } from 'Components/VideoDetails/VideoDetails';
+import { ErrorPage } from 'Components/ErrorPage/ErrorPage';
+import { Profile } from 'Components/Auth/Profile/Profile';
+import { SearchedVideos } from 'Components/VideoPages/SearchedVideos/SearchedVideos';
+import { PlaylistVideos } from 'Components/VideoPages/Playlists/PlaylistVideos';
 
 function App() {
   const navigate = useNavigate();
@@ -142,7 +141,6 @@ function App() {
               <Route path="/error" element={<ErrorPage />} />
             </Routes>
           </div>
-
         </div>
         <PhoneNav />
       </div>
