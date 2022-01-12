@@ -1,18 +1,17 @@
 import './styles.css';
 import ReactPlayer from 'react-player/youtube';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios/index';
+import axios from 'axios';
 import { Link, Navigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { FaPlusCircle, FaCheckCircle } from 'react-icons/fa';
-import {
-  addOrRemoveVideoInPlaylist,
-  WATCH_API,
-  addVideosInPlaylist,
-  createPlaylist
-} from '../../utils/index';
+import { addOrRemoveVideoInPlaylist } from '../../utils/service';
+import { WATCH_API } from '../../utils/data';
+import { addVideosInPlaylist } from '../../utils/service';
+import { createPlaylist } from '../../utils/service';
 import PulseLoader from 'react-spinners/PulseLoader';
-import { useAppDataContext, useAuth } from '../../Context/index';
+import { useAppDataContext } from '../../Context/AppDataContext';
+import { useAuth } from '../../Context/AuthContext';
 
 export const VideoDetails = () => {
   const [video, setVideo] = useState(null);

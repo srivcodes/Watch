@@ -1,27 +1,29 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useAppDataContext, useAuth } from './Context/index';
-import { WATCH_API, setupAuthExceptionHandler } from './utils/index';
+import { useAppDataContext} from './Context/AppDataContext';
+import { useAuth } from './Context/AuthContext'
+import { WATCH_API } from './utils/data';
+import { setupAuthExceptionHandler } from './Utils/AuthExceptionHandler'
 import './App.css';
 
-import { Header } from './Components/Header/index';
-import { Home } from './Components/Home/index';
-import { PrivateRoute } from './Components/Auth/index';
-import {  Liked } from './Components/VideoPages/index';
-import { Playlists } from './Components/VideoPages/index';
-import {  History } from './Components/VideoPages/index';
-import { Explore } from './Components/VideoPages/index';
-import { Login } from './Components/Auth/index';
-import { Signup } from './Components/Auth/index';
-import { ForgotPassword } from './Components/Auth/index';
-import { Nav } from './Components/Nav/index';
-import { PhoneNav } from './Components/Nav/index';
-import { VideoDetails } from './Components/VideoDetails/index';
-import { ErrorPage } from './Components/ErrorPage/index';
-import { Profile } from './Components/Auth/Profile/index';
-import { SearchedVideos } from './Components/VideoPages/index';
-import { PlaylistVideos } from './Components/VideoPages/index';
+import { Header } from './Components/Header/Header';
+import { Home } from './Components/Home/Home';
+import { PrivateRoute } from './Components/Auth/PrivateRoute';
+import {  Liked } from './Components/VideoPages/Liked/Liked';
+import { Playlists } from './Components/VideoPages/Playlists/Playlists';
+import {  History } from './Components/VideoPages/History/History';
+import { Explore } from './Components/VideoPages/Explore/Explore';
+import { Login } from './Components/Auth/Login';
+import { Signup } from './Components/Auth/Signup';
+import { ForgotPassword } from './Components/Auth/ForgotPassword';
+import { Nav } from './Components/Nav/Nav';
+import { PhoneNav } from './Components/Nav/PhoneNav';
+import { VideoDetails } from './Components/VideoDetails/VideoDetails';
+import { ErrorPage } from './Components/ErrorPage/ErrorPage';
+import { Profile } from './Components/Auth/Profile/Profile';
+import { SearchedVideos } from './Components/VideoPages/SearchedVideos/SearchedVideos';
+import { PlaylistVideos } from './Components/VideoPages/Playlists/PlaylistVideos';
 
 
 function App() {

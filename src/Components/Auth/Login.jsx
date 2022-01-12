@@ -3,7 +3,7 @@ import { Link, useLocation, Navigate } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useAuth } from '../../Context/index';
+import { useAuth } from '../../Context/AuthContext';
 
 export const Login = () => {
   const [isHidden, setIsHidden] = useState(true);
@@ -141,3 +141,4 @@ export const Login = () => {
     </div>
   );
 };
+

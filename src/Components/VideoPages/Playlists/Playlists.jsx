@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppDataContext } from '../../../Context/index';
+import { useAppDataContext } from '../../../Context/AppDataContext';
 import { Link } from 'react-router-dom';
 
 import './styles.css';

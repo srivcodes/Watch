@@ -1,6 +1,6 @@
 import { Navigate, Route } from 'react-router-dom';
 import React from 'react';
-import { useAuth } from '../../Context/index';
+import { useAuth } from '../../Context/AuthContext';
 
 export const PrivateRoute = ({ path, ...props }) => {
   const {
@@ -15,3 +15,4 @@ export const PrivateRoute = ({ path, ...props }) => {
     <Navigate to="/login" state={{ from: path }} replace />
   );
 };
+

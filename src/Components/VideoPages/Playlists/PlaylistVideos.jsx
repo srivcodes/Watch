@@ -1,11 +1,12 @@
-import { useAppDataContext, useAuth } from "../../../Context/index";
+import { useAppDataContext } from '../../../Context/AppDataContext';
+import { useAuth } from "../../../Context/AuthContext";
 import React, { useState } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import {
 	addOrRemoveVideoInPlaylist,
 	deletePlaylist,
 	updatePlaylistTitle,
-} from "../../../utils/index";
+} from "../../../utils/service";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { BiEditAlt } from "react-icons/bi";
 import { FaCheck, FaTimes } from "react-icons/fa";

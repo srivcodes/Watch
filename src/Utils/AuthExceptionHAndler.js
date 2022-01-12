@@ -1,4 +1,4 @@
-import axios from 'axios/index';
+import axios from 'axios';
 
 export function setupAuthExceptionHandler(logoutUser, navigate) {
   const UNAUTHORIZED = 401;

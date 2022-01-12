@@ -1,7 +1,7 @@
 import axios from 'axios/index';
 import React, { useEffect } from 'react';
-import { useAuth } from '../../../Context/index';
-import { WATCH_API } from '../../../utils/index';
+import { useAuth } from '../../../Context/AuthContext';
+import { WATCH_API } from '../../../utils/data';
 import { FaUserCircle } from 'react-icons/fa';
 import './styles.css';
 
@@ -68,3 +68,5 @@ export const Profile = () => {
     </div>
   );
 };
+
+
