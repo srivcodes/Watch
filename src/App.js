@@ -4,7 +4,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useAppDataContext} from './Context/AppDataContext';
 import { useAuth } from './Context/AuthContext'
 import { WATCH_API } from './utils/data';
-import { setupAuthExceptionHandler } from './Utils/AuthExceptionHandler'
+import { setupAuthExceptionHandler } from './utils/AuthExceptionHandler'
 import './App.css';
 
 import { Header } from './Components/Header/Header';
