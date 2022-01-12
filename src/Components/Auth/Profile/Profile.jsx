@@ -48,13 +48,14 @@ export const Profile = () => {
           <FaUserCircle className="profile-logo" />
           <div>
             <p className="profile-text">
-              Firstname:{' '}
+              {' '} {' '}
               <span className="primary-color">{userDetails?.firstname}</span>
-            </p>
-            <p className="profile-text">
-              Lastname:{' '}
               <span className="primary-color">{userDetails?.lastname}</span>
             </p>
+            {/* <p className="profile-text">
+              Lastname:{' '}
+              <span className="primary-color">{userDetails?.lastname}</span>
+            </p> */}
             <p className="profile-text">
               Email: <span className="primary-color">{userDetails?.email}</span>
             </p>

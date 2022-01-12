@@ -10,7 +10,9 @@ import { GiLipstick, GiWool } from 'react-icons/gi';
 
 export const Nav = () => {
   const search = new URLSearchParams(useLocation().search);
-  const searchedCategory = search.get('category') ? search.get('category') : 'All Videos';
+  const searchedCategory = search.get('category')
+    ? search.get('category')
+    : 'All Videos';
   return (
     <div className="nav-container">
       <div className="nav-main">

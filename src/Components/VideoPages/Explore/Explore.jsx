@@ -47,7 +47,7 @@ export const Explore = () => {
           </section>
         ) : (
           <div className="loader-container">
-            <PulseLoader loading={true} size={15} color={'#6c5ecf'} />
+            <PulseLoader loading={true} size={15} color={'rgb(78, 33, 150, 0.9)'} />
           </div>
         )}
       </div>

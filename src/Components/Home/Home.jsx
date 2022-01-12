@@ -22,7 +22,7 @@ export const Home = () => {
                 textile industry
                 <br />
               </p>
-              <Link to="/explore?cat=Basics">
+              <Link to="/explore?cat=basics">
                 <button className="discover-button">Know How</button>
               </Link>
             </div>
@@ -34,7 +34,7 @@ export const Home = () => {
                 <br />
                 do your planet a favour
               </p>
-              <Link to="/explore?cat=Styling">
+              <Link to="/explore?cat=styling">
                 <button className="discover-button">Know More</button>
               </Link>
             </div>
