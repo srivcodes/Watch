@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { BiSearch } from 'react-icons/bi';
 import './styles.css';
-import { useAuth } from '../../Context/AuthContext';
+import { useAuth } from 'Context/AuthContext';
 // import { useAuth } from "../../Context";
 
 export const Header = () => {
