@@ -1,8 +1,8 @@
 import './styles.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { VideoCard } from '../VideoCard/VideoCard';
-import { useAppDataContext } from '../../Context/AppDataContext';
+import { VideoCard } from 'Components/VideoCard/VideoCard';
+import { useAppDataContext } from 'Context/AppDataContext';
 import PulseLoader from 'react-spinners/PulseLoader';
 
 export const Home = () => {
