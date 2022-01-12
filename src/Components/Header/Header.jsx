@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaUserCircle, FaYoutube } from 'react-icons/fa';
 import { BiSearch } from 'react-icons/bi';
 import './styles.css';
-import { useAuth } from '../../Context';
+import { useAuth } from '../../Context/index';
 // import { useAuth } from "../../Context";
 
 export const Header = () => {
@@ -20,7 +20,6 @@ export const Header = () => {
       <nav className="header-main">
         <div className="head-left">
           <Link to="/" className="head-main-logo">
-            {/* <FaYoutube className="head-logo" /> */}
             <span className="head-watch">Watch</span>
           </Link>
         </div>

@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useAuth } from '../../Context';
+import { useAuth } from '../../Context/index';
 
 export const ForgotPassword = () => {
   const [isHidden, setIsHidden] = useState(true);

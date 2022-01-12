@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from "react";
-import { useAppDataContext, useAuth } from '../../../Context';
-import { addOrRemoveVideoInPlaylist } from '../../../utils';
+import { useAppDataContext, useAuth } from '../../../Context/index';
+import { addOrRemoveVideoInPlaylist } from '../../../utils/index';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import './styles.css';
 

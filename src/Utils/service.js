@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios/index';
 import { WATCH_API } from './data';
 
 export const createPlaylist = async ({

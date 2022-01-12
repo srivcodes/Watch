@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useReducer } from 'react';
-import axios from 'axios';
+import axios from 'axios/index';
 import { useNavigate } from 'react-router-dom';
-import { AuthReducer } from '../Reducer';
-import { WATCH_API } from '../utils';
+import { AuthReducer } from '../Reducer/index';
+import { WATCH_API } from '../utils/index';
 
 const AuthContext = createContext();
 

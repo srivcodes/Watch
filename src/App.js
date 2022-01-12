@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useAppDataContext, useAuth } from './Context';
-import { WATCH_API, setupAuthExceptionHandler } from './utils';
+import { useAppDataContext, useAuth } from './Context/index';
+import { WATCH_API, setupAuthExceptionHandler } from './utils/index';
 import './App.css';
 
 import { Header } from './Components/Header/index';

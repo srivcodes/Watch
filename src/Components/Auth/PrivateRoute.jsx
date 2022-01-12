@@ -1,6 +1,6 @@
 import { Navigate, Route } from 'react-router-dom';
 import React from 'react';
-import { useAuth } from '../../Context';
+import { useAuth } from '../../Context/index';
 
 export const PrivateRoute = ({ path, ...props }) => {
   const {

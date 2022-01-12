@@ -3,7 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useLocation, Navigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import * as Yup from "yup";
-import { useAuth } from "../../Context";
+import { useAuth } from "../../Context/index";
 import "./styles.css";
 
 export const Signup = () => {

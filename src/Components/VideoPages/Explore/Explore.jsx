@@ -1,9 +1,9 @@
 import './explore.css';
 import React from 'react';
-import { VideoCard } from '../../VideoCard/VideoCard';
+import { VideoCard } from '../../VideoCard/index';
 import { useLocation, NavLink } from 'react-router-dom';
 import { categories } from '../../../utils/data';
-import { useAppDataContext } from '../../../Context';
+import { useAppDataContext } from '../../../Context/index';
 
 import PulseLoader from 'react-spinners/PulseLoader';
 

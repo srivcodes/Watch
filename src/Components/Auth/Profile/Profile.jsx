@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from 'axios/index';
 import React, { useEffect } from 'react';
-import { useAuth } from '../../../Context';
-import { WATCH_API } from '../../../utils';
+import { useAuth } from '../../../Context/index';
+import { WATCH_API } from '../../../utils/index';
 import { FaUserCircle } from 'react-icons/fa';
 import './styles.css';
 
@@ -21,7 +21,7 @@ export const Profile = () => {
             data: { response },
             status
           } = await axios({
-            url: `${VIZZ_API}/users/info`,
+            url: `${WATCH_API}/users/info`,
             method: 'GET',
             headers: {
               Authorization: `Bearer ${token}`

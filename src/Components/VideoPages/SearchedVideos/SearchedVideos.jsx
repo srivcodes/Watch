@@ -1,8 +1,8 @@
 import "./styles.css";
 import React from 'react';
-import { useAppDataContext } from "../../../Context";
+import { useAppDataContext } from "../../../Context/index";
 import { useLocation } from "react-router-dom";
-import { VideoCard } from "../../VideoCard";
+import { VideoCard } from "../../VideoCard/index";
 
 export const SearchedVideos = () => {
 	const { state } = useAppDataContext();
