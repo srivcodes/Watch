@@ -3,8 +3,7 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useAppDataContext } from 'Context/AppDataContext';
 import { useAuth } from 'Context/AuthContext';
-import { WATCH_API } from 'Utils/data';
-import { setupAuthExceptionHandler } from 'Utils/AuthExceptionHandler';
+import { WATCH_API, setupAuthExceptionHandler } from 'Utils/data';
 import './App.css';
 
 import { Header } from 'Components/Header/Header';

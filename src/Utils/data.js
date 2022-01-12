@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const categories = [
   {
     label: 'All Videos',
@@ -32,6 +34,21 @@ export const categories = [
     id: 'popular'
   }
 ];
+
+
+export function setupAuthExceptionHandler(logoutUser, navigate) {
+  const UNAUTHORIZED = 401;
+  axios.interceptors.response.use(
+    (response) => response,
+    (error) => {
+      if (error?.response?.status === UNAUTHORIZED) {
+        logoutUser();
+        navigate('login');
+      }
+      return Promise.reject(error);
+    }
+  );
+}
 
 export const WATCH_API = 'https://backend-watch.herokuapp.com';
 // export const WATCH_API = 'http://localhost:8000';
