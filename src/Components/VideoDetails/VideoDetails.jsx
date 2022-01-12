@@ -5,13 +5,11 @@ import axios from 'axios';
 import { Link, Navigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { FaPlusCircle, FaCheckCircle } from 'react-icons/fa';
-import { addOrRemoveVideoInPlaylist } from '../../utils/service';
-import { WATCH_API } from '../../utils/data';
-import { addVideosInPlaylist } from '../../utils/service';
-import { createPlaylist } from '../../utils/service';
+import { addOrRemoveVideoInPlaylist, addVideosInPlaylist, createPlaylist } from 'Utils/service';
+import { WATCH_API } from 'Utils/data';
 import PulseLoader from 'react-spinners/PulseLoader';
-import { useAppDataContext } from '../../Context/AppDataContext';
-import { useAuth } from '../../Context/AuthContext';
+import { useAppDataContext } from 'Context/AppDataContext';
+import { useAuth } from 'Context/AuthContext';
 
 export const VideoDetails = () => {
   const [video, setVideo] = useState(null);
