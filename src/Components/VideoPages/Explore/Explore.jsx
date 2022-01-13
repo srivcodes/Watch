@@ -18,14 +18,14 @@ export const Explore = () => {
       <div className="explore-main">
         <nav className="category-toggle">
           {categories
-            .filter(({ id }) => id !== 'popular')
-            .map(({ id, label }) => {
+            .filter(({ category }) => category !== 'popular')
+            .map(({ category, label, id }) => {
               return (
                 <NavLink
-                  to={`?category=${id}`}
+                  to={`?category=${category}`}
                   key={id}
                   className={`category-cta ${
-                    searchedCategory === id ? 'category-cta-active' : ''
+                    searchedCategory === category ? 'category-cta-active' : ''
                   }`}
                 >
                   {label}

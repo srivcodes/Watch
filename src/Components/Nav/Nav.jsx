@@ -19,7 +19,7 @@ export const Nav = () => {
         <nav className="nav-menu">
           <div className="nav-head">MENU</div>
           <NavLink
-            to="/explore"
+            to="/explore?category=all_videos"
             className="menu-main"
             activeClassName="nav-active"
           >
@@ -66,7 +66,7 @@ export const Nav = () => {
         <nav className="nav-category">
           <div className="nav-head">CATEGORY</div>
           <NavLink
-            to="/explore?cat=basics"
+            to="/explore?category=basics"
             className={`cat-main ${
               searchedCategory === 'basics' ? 'nav-active' : ''
             }`}

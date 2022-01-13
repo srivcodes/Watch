@@ -44,7 +44,7 @@ export const addOrRemoveVideoInPlaylist = async ({
       data: { response }
     } = await axios({
       method: 'POST',
-      url: `${VWATCH_API}/playlists/${playlistId}/videos`,
+      url: `${WATCH_API}/playlists/${playlistId}/videos`,
       data: {
         video,
         date: new Date().toDateString()
