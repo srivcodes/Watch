@@ -13,19 +13,20 @@ export const Explore = () => {
   const searchedCategory = search.get('category')
     ? search.get('category')
     : 'All Videos';
+    console.log(searchedCategory,"from explore");
+    console.log(state,"from explore again");
   return (
     <div className="explore-container">
       <div className="explore-main">
         <nav className="category-toggle">
           {categories
-            .filter(({ category }) => category !== 'popular')
-            .map(({ category, label, id }) => {
+            .map(({ id, label }) => {
               return (
                 <NavLink
-                  to={`?category=${category}`}
+                  to={`?category=${id}`}
                   key={id}
                   className={`category-cta ${
-                    searchedCategory === category ? 'category-cta-active' : ''
+                    searchedCategory === id ? 'category-cta-active' : ''
                   }`}
                 >
                   {label}
@@ -40,7 +41,7 @@ export const Explore = () => {
                   return <VideoCard video={video} key={video._id} />;
                 })
               : state.videos
-                  .filter((video) => video.id === searchedCategory)
+                  .filter((video) => video.category === searchedCategory)
                   .map((video) => {
                     return <VideoCard video={video} key={video._id} />;
                   })}
@@ -54,3 +55,4 @@ export const Explore = () => {
     </div>
   );
 };
+// .filter(({ id }) => id !== 'popular')    

@@ -9,7 +9,8 @@
 }
 
 .header-container {
-  height: 7.5vh;
+  /* height: 7.5vh; */
+  height: 75px;
   background-color: var(--back-primary);
   display: flex;
   justify-content: center;
