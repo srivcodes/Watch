@@ -49,7 +49,7 @@ export const Home = () => {
           >
             {state?.videos?.length !== 0 ? (
               state?.videos
-                ?.filter((video) => video?.category === 'Popular')
+                ?.filter((video) => video?.category === 'popular')
                 ?.map((video) => {
                   return <VideoCard video={video} key={video._id} />;
                 })
