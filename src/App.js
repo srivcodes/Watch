@@ -40,10 +40,9 @@ function App() {
     (async () => {
       try {
         const { data } = await axios.get(`${WATCH_API}/videos`);
-        console.log(data);
         dispatch({ type: 'SET_VIDEOS', payload: data.response });
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     })();
   }, []);
@@ -76,7 +75,7 @@ function App() {
     }
   }, [token]);
 
-  // console.log({ state });
+
   return (
     <div className="App">
       <div className="app-container">

@@ -7,7 +7,7 @@ export const PrivateRoute = ({ path, ...props }) => {
     state: { token }
   } = useAuth();
 
-  console.log(props.children);
+  
 
   return token ? (
     props.children

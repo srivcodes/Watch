@@ -13,8 +13,6 @@ export const Header = () => {
   const {
     state: { userName }
   } = useAuth();
-  // const data = useAuth();
-  // console.log(data, 'data from useAuth');
   return (
     <div className="header-container">
       <nav className="header-main">

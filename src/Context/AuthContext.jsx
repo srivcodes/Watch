@@ -33,7 +33,6 @@ export const AuthProvider = ({ children }) => {
         password
       });
 
-      console.log({ message });
       return { status };
     } catch (error) {
       console.error(error);
@@ -88,7 +87,6 @@ export const AuthProvider = ({ children }) => {
         password
       });
 
-      console.log({ message });
       if (status === 200) {
         return { status };
       }

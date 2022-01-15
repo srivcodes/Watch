@@ -12,7 +12,6 @@ export const Profile = () => {
     logout
   } = useAuth();
  const sampleData = useAuth();
- console.log(sampleData , "this is from profile");
   useEffect(() => {
     if (!userDetails) {
       (async () => {
@@ -27,7 +26,7 @@ export const Profile = () => {
               Authorization: `Bearer ${token}`
             }
           });
-          console.log({ response });
+        
 
           if (status === 200) {
             dispatch({
@@ -36,7 +35,7 @@ export const Profile = () => {
             });
           }
         } catch (error) {
-          console.log(error);
+          console.error(error);
         }
       })();
     }

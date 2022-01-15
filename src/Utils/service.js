@@ -28,7 +28,7 @@ export const createPlaylist = async ({
     });
     setPlaylistTitle('');
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -55,7 +55,7 @@ export const addOrRemoveVideoInPlaylist = async ({
     });
     dispatch({ type, payload: response });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -82,7 +82,7 @@ export const addVideosInPlaylist = async ({
     });
     dispatch({ type, payload: response });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -107,7 +107,7 @@ export const updatePlaylistTitle = async ({
 
     dispatch({ type: 'UPDATE_PLAYLIST', payload: response });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -125,7 +125,7 @@ export const deletePlaylist = async ({ token, playlistId, dispatch }) => {
 
     dispatch({ type: 'DELETE_PLAYLIST', payload: response._id });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -146,6 +146,6 @@ export const clearHistory = async ({ token, playlistId, dispatch }) => {
 
     dispatch({ type: 'SET_HISTORY', payload: response });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };

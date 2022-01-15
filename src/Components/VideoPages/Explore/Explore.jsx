@@ -13,8 +13,6 @@ export const Explore = () => {
   const searchedCategory = search.get('category')
     ? search.get('category')
     : 'All Videos';
-    console.log(searchedCategory,"from explore");
-    console.log(state,"from explore again");
   return (
     <div className="explore-container">
       <div className="explore-main">

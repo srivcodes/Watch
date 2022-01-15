@@ -16,7 +16,7 @@ export const SearchedVideos = () => {
 			video.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			video.author.toLowerCase().includes(searchTerm.toLowerCase())
 	);
-	// console.log({ filteredVideo });
+	
 	return (
 		<div className="searched-container">
 			<div className="searched-main">

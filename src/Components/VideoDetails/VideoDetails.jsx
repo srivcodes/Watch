@@ -48,7 +48,7 @@ export const VideoDetails = () => {
         } = await axios.get(`${WATCH_API}/videos/${vidId}`);
         setVideo(response);
       } catch (error) {
-        console.log(error);
+        console.error(error);
         setVideo(null);
       }
     })();
