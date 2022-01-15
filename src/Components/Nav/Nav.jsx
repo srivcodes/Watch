@@ -78,7 +78,7 @@ export const Nav = () => {
             <span className="cat-head">Basics</span>
           </NavLink>
           <NavLink
-            to="/explore?category=indian_textile"
+            to="/explore?category=indian_textiles"
             className={`cat-main ${
               searchedCategory === 'indian_textiles' ? 'nav-active' : ''
             }`}
