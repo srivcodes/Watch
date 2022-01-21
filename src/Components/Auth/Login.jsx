@@ -69,7 +69,7 @@ export const Login = () => {
                 fetch('/', {
                   method: 'POST',
                   headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/x-www-form-urlencoded'
                   },
                   body: encode({ 'form-name': 'login-form', ...values })
                 }).then(() => {
