@@ -63,7 +63,7 @@ export const Login = () => {
                   .min(8, 'pasword must be 8 characters or more')
                   .required('Password required')
               })}
-              onSubmit={(values, actions) => {
+              onSubmit={() => (values, actions) => {
                 const { email, password } = values;
                 const { setSubmitting } = actions;
                 fetch('/', {
