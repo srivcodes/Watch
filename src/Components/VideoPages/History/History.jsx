@@ -15,7 +15,6 @@ export const History = () => {
   const {
     state: { token }
   } = useAuth();
-
   return (
     <div className="history-container">
       <div className="history-main">
@@ -44,9 +43,11 @@ export const History = () => {
           </button>
         </div>
         <div className="playlist-videos-container">
-          {history?.videos?.length !== 0 ? (
-            history?.videos?.map(({ video, date }, key) => (
-              <div className="video-flat-card" key={key}>
+          {history.videos && history.videos.length  ? (
+              history.videos.map(({ video, date }, key) => {
+              console.log(video,"logging video");
+              return <div className="video-flat-card" key={key}>
+
                 <img
                   src={video.thumbnail}
                   alt="video-img"
@@ -83,7 +84,7 @@ export const History = () => {
                   </button>
                 </div>
               </div>
-            ))
+          })
           ) : (
             <div className="playlist-empty">
               <h1>You have not watched any video</h1>

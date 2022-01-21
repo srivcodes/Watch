@@ -17,6 +17,15 @@ export const Login = () => {
     login
   } = useAuth();
 
+  //helper function
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+
   const formSubmit = async ({
     email,
     password,
@@ -54,8 +63,17 @@ export const Login = () => {
                   .min(8, 'pasword must be 8 characters or more')
                   .required('Password required')
               })}
-              onSubmit={({ email, password }, { setSubmitting }) => {
-                formSubmit({
+              onSubmit={(values, actions) => {
+                const { email, password } = values;
+                const { setSubmitting } = actions;
+                fetch('/', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: encode({ 'form-name': 'login-form', ...values })
+                }).then(() => {
+                  formSubmit({
                   email,
                   password,
                   from: previousPath,
@@ -64,9 +82,18 @@ export const Login = () => {
                   setLoginError
                 });
                 setSubmitting(false);
+                }).catch((err) => { 
+                  console.error(err);
+                }).finally(() => {
+                  actions.setSubmitting(false);
+                });
               }}
             >
-              <Form className="form-field-container">
+              <Form
+                className="form-field-container"
+                name="login-form"
+                data-netlify={true}
+              >
                 <div className="input-control">
                   <label htmlFor="email" className="form-label">
                     Email Address
@@ -141,4 +168,3 @@ export const Login = () => {
     </div>
   );
 };
-
